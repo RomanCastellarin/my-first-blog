@@ -15,6 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Login redirection URL
+LOGIN_REDIRECT_URL = '/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -25,7 +27,7 @@ SECRET_KEY = '5edp)9w6g3v5#0l%y+7$+$+hy#z4mg#a6u^=i5sr75o20vn+ho'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost', '*']
 
 
 # Application definition
@@ -50,11 +52,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-MIDDLEWARE_CLASSES = [
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-]
+#MIDDLEWARE_CLASSES = [
+#    'django.contrib.sessions.middleware.SessionMiddleware',
+#    'django.contrib.auth.middleware.AuthenticationMiddleware',
+#]
 
 ROOT_URLCONF = 'mysite.urls'
 
